@@ -1,0 +1,16 @@
+import random
+team_name = "Honlasic"
+strategy_name = "Chaotic Mimic"
+strategy_description = '''/Start collude, then mimic other player's last choice. Betray 87% of the time."
+'''
+
+
+
+
+def move(myhistory, theirhistory, myscore, theirscore):
+    if 'b' or 'c' not in theirhistory:
+        return 'c'
+    elif random.random() < 0.13:
+        return 'b'
+    else:
+        return 'c'
